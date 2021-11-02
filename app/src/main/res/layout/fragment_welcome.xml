@@ -9,11 +9,35 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".welcome.WelcomeFragment">
+        android:orientation="vertical"
+        android:gravity="center"
+        tools:context=".welcome.WelcomeFragment" >
 
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="@string/hello_blank_fragment" />
+            android:id="@+id/one_text"
+            style="@style/label_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/label_margin"
+            android:text="@string/one_text" />
+
+        <TextView
+            android:id="@+id/two_text"
+            style="@style/label_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/label_margin"
+            android:text="@string/two_text" />
+
+        <Button
+            android:id="@+id/button"
+            style="@style/button_text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/label_margin"
+            android:padding="@dimen/padding_button"
+            android:background="@drawable/rounded_button"
+            android:text="@string/instruction_button" />
     </LinearLayout>
 </layout>

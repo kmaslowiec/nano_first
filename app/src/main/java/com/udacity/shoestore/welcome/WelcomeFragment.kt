@@ -11,10 +11,6 @@ import com.udacity.shoestore.databinding.FragmentWelcomeBinding
 
 class WelcomeFragment : Fragment() {
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-    }
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -25,5 +21,4 @@ class WelcomeFragment : Fragment() {
         // Inflate the layout for this fragment
         return binding.root
     }
-
 }

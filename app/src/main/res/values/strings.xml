@@ -6,4 +6,7 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="new_login">New Login</string>
     <string name="login">Login</string>
+    <string name="two_text">Two</string>
+    <string name="one_text">One</string>
+    <string name="instruction_button">Instructions</string>
 </resources>
