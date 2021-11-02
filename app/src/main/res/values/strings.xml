@@ -1,6 +1,9 @@
 <resources>
-    <string name="app_name">ShoeStore</string>
+    <string name="app_name">Shoe Store</string>
     <string name="password_label">Password</string>
     <string name="email_label">E-mail</string>
     <string name="email_field_hint">e-mail</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="new_login">New Login</string>
+    <string name="login">Login</string>
 </resources>

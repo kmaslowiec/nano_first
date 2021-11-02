@@ -2,4 +2,5 @@
 <resources>
     <dimen name="top_margin">16dp</dimen>
     <dimen name="label_text_size">30sp</dimen>
+    <dimen name="button_text_size">20sp</dimen>
 </resources>

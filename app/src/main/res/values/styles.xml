@@ -6,6 +6,7 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:textColorPrimary">@color/textColorPrimary</item>
     </style>
     <style name="AppTheme.NoActionBar">
         <item name="windowActionBar">false</item>
@@ -20,4 +21,10 @@
         <item name="android:fontFamily">"@font/roboto"</item>
         <item name="android:textSize">@dimen/label_text_size</item>
     </style>
+
+    <style name="button_text_style">
+        <item name="android:fontFamily">"@font/roboto"</item>
+        <item name="android:textSize">@dimen/button_text_size</item>
+    </style>
+
 </resources>
