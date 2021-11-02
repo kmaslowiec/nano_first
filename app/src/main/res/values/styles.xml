@@ -22,9 +22,16 @@
         <item name="android:textSize">@dimen/label_text_size</item>
     </style>
 
+    <style name="text_style">
+        <item name="android:fontFamily">"@font/roboto"</item>
+        <item name="android:textSize">@dimen/text_size</item>
+    </style>
+
     <style name="button_text_style">
         <item name="android:fontFamily">"@font/roboto"</item>
         <item name="android:textSize">@dimen/button_text_size</item>
+        <item name="android:padding">@dimen/padding</item>
     </style>
 
+    <dimen name="text_size">16sp</dimen>
 </resources>

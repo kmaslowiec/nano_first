@@ -26,8 +26,8 @@ class LoginFragment : Fragment() {
 
         val binding = DataBindingUtil.inflate<FragmentLoginBinding>(layoutInflater, R.layout.fragment_login, container,false)
 
-        binding.login.setOnClickListener{ view -> view.findNavController().navigate(LoginFragmentDirections.actionLoginToWelcomeFragment()) }
-        binding.newLogin.setOnClickListener{view -> view.findNavController().navigate(LoginFragmentDirections.actionLoginToWelcomeFragment())}
+        binding.buttonLogin.setOnClickListener{ view -> view.findNavController().navigate(LoginFragmentDirections.actionLoginToWelcomeFragment()) }
+        binding.buttonNewLogin.setOnClickListener{view -> view.findNavController().navigate(LoginFragmentDirections.actionLoginToWelcomeFragment())}
 
         // Inflate the layout for this fragment
         return binding.root

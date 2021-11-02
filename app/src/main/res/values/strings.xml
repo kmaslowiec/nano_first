@@ -3,10 +3,12 @@
     <string name="password_label">Password</string>
     <string name="email_label">E-mail</string>
     <string name="email_field_hint">e-mail</string>
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="shoe_list_button">Shoe List</string>
     <string name="new_login">New Login</string>
     <string name="login">Login</string>
-    <string name="two_text">Two</string>
-    <string name="one_text">One</string>
+    <string name="two_text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</string>
+    <string name="one_text">Welcome</string>
     <string name="instruction_button">Instructions</string>
+    <string name="instruction_label">Instruction</string>
+    <string name="instruction_text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</string>
 </resources>

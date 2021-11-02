@@ -11,32 +11,31 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:gravity="center"
-        tools:context=".welcome.WelcomeFragment" >
+        tools:context=".instruction.InstructionFragment" >
 
         <TextView
-            android:id="@+id/one_text"
+            android:id="@+id/instr_label"
             style="@style/label_style"
+            android:layout_margin="@dimen/label_margin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_margin="@dimen/label_margin"
-            android:text="@string/one_text" />
+            android:text="@string/instruction_label" />
 
         <TextView
-            android:id="@+id/two_text"
+            android:id="@+id/instruction_text"
             style="@style/text_style"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="@dimen/label_margin"
-            android:text="@string/two_text" />
+            android:padding="@dimen/padding"
+            android:text="@string/instruction_text" />
 
         <Button
-            android:id="@+id/button_to_instruction"
+            android:id="@+id/button_to_shoe_list"
             style="@style/button_text_style"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="@dimen/label_margin"
+            android:layout_margin="@dimen/top_margin"
             android:background="@drawable/rounded_button"
-            android:text="@string/instruction_button" />
+            android:text="@string/shoe_list_button" />
     </LinearLayout>
 </layout>
