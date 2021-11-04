@@ -3,9 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/button_login">
+    app:startDestination="@id/loginFragment">
     <fragment
-        android:id="@+id/button_login"
+        android:id="@+id/loginFragment"
         android:name="com.udacity.shoestore.login.LoginFragment"
         android:label="@string/fragment_label_login"
         tools:layout="@layout/fragment_login">

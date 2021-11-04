@@ -23,6 +23,8 @@ class WelcomeFragment : Fragment() {
             view.findNavController()
                 .navigate(WelcomeFragmentDirections.actionWelcomeFragmentToInstructionFragment())
         }
+
+        setHasOptionsMenu(true)
         // Inflate the layout for this fragment
         return binding.root
     }
