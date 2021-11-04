@@ -9,6 +9,7 @@ import androidx.navigation.NavController
 import androidx.navigation.NavDestination
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
+import androidx.navigation.ui.NavigationUI
 import androidx.navigation.ui.onNavDestinationSelected
 import androidx.navigation.ui.setupWithNavController
 import com.udacity.shoestore.databinding.ActivityMainBinding
@@ -29,18 +30,13 @@ class MainActivity : AppCompatActivity() {
         binding.toolbar.setupWithNavController(navController, appBarConfiguration)
         setSupportActionBar(binding.toolbar)
 
+
+
         Timber.plant(Timber.DebugTree())
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        val navController = findNavController(R.id.fragment)
-
-        //inflate menu if not in start destination
-        navController.addOnDestinationChangedListener { nc: NavController, nd: NavDestination, args: Bundle? ->
-            if (nd.id != nc.graph.startDestination) {
-                menuInflater.inflate(R.menu.menu, menu)
-            }
-        }
+        menuInflater.inflate(R.menu.menu, menu)
 
         return true
     }
@@ -48,5 +44,10 @@ class MainActivity : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         val navController = findNavController(R.id.fragment)
         return item.onNavDestinationSelected(navController) || super.onOptionsItemSelected(item)
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        val navController = this.findNavController(R.id.fragment)
+        return navController.navigateUp()
     }
 }
