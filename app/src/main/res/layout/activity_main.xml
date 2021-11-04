@@ -5,14 +5,13 @@
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
-        android:layout_height="646dp"
+        android:layout_height="match_parent"
         tools:context=".MainActivity">
 
 
         <com.google.android.material.appbar.AppBarLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/app_name"
             android:theme="@style/AppTheme.AppBarOverlay">
 
 
@@ -21,12 +20,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
                 android:background="?attr/colorPrimary"
-                android:text="@string/app_name"
                 app:popupTheme="@style/AppTheme.PopupOverlay" />
 
         </com.google.android.material.appbar.AppBarLayout>
 
-        <androidx.fragment.app.FragmentContainerView
+        <fragment
             android:id="@+id/fragment"
             android:name="androidx.navigation.fragment.NavHostFragment"
             android:layout_width="match_parent"

@@ -11,4 +11,10 @@
     <string name="instruction_button">Instructions</string>
     <string name="instruction_label">Instruction</string>
     <string name="instruction_text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</string>
+    <string name="fab_add_new_shoe">adds new shoe</string>
+    <string name="shoe_list_fragment_name">Shoe List</string>
+    <string name="fragment_label_shoe_list">Shoe List</string>
+    <string name="fragment_label_instructions">Instructions</string>
+    <string name="fragment_label_welcome">Welcome to Shoe Store</string>
+    <string name="fragment_label_login">Login</string>
 </resources>
