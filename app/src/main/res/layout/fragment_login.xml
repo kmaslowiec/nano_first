@@ -52,11 +52,12 @@
             android:hint="@string/email_field_hint"
             android:inputType="textEmailAddress"
             android:minHeight="48dp"
+            android:textColor="@color/editFieldsTextColor"
             app:layout_constraintBottom_toTopOf="@+id/password_label"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/email_label"
-            tools:ignore="TextContrastCheck" />
+             />
 
         <EditText
             android:id="@+id/password_field"
@@ -67,11 +68,12 @@
             android:ems="10"
             android:inputType="textPassword"
             android:minHeight="48dp"
+            android:textColor="@color/editFieldsTextColor"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/password_label"
-            tools:ignore="SpeakableTextPresentCheck" />
+             />
 
         <Button
             android:id="@+id/button_new_login"

@@ -4,4 +4,9 @@
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
     <color name="textColorPrimary">#ffffff</color>
+
+    <!--my colors-->
+    <color name="editFieldsTextColor">#000000</color>
+    <color name="textColor">#000000</color>
+    <color name="hintTextColor">#0277BD</color>
 </resources>
