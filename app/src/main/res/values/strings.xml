@@ -26,4 +26,6 @@
     <string name="company_edit">Company</string>
     <string name="size_edit">Shoe size</string>
     <string name="desc_edit">Describe shoes</string>
+    <string name="button_save">Save</string>
+    <string name="button_cancel">Cancel</string>
 </resources>
