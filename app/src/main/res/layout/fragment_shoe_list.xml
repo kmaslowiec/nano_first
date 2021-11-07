@@ -19,13 +19,14 @@
             tools:layout_editor_absoluteY="249dp">
 
             <LinearLayout
+                android:id="@+id/shoes_container"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="top"
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/fragment_name"
+                    android:id="@+id/first_shoe"
                     style="@style/label_style"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"

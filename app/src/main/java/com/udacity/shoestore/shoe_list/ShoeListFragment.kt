@@ -10,22 +10,25 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
 import com.udacity.shoestore.R
 import com.udacity.shoestore.databinding.FragmentShoeListBinding
+import com.udacity.shoestore.shoe_detail.ShoeViewModel
+import timber.log.Timber
 
 class ShoeListFragment : Fragment() {
 
-    companion object {
-        fun newInstance() = ShoeListFragment()
-    }
+    private var shoe: String = ""
+    private lateinit var viewModel: ShoeViewModel
+    private lateinit var binding : FragmentShoeListBinding
 
-    private lateinit var viewModel: ShoeListViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
 
-        viewModel = ViewModelProvider(this)[ShoeListViewModel::class.java]
-        val binding = DataBindingUtil.inflate<FragmentShoeListBinding>(layoutInflater, R.layout.fragment_shoe_list, container, false)
+        viewModel = ViewModelProvider(requireActivity())[ShoeViewModel::class.java]
+        binding = DataBindingUtil.inflate(layoutInflater, R.layout.fragment_shoe_list, container, false)
+
+        viewModel.getShoe.observe(viewLifecycleOwner, { shoe = it.name })
 
         binding.fab.setOnClickListener { view ->
             view.findNavController().navigate(
@@ -35,5 +38,10 @@ class ShoeListFragment : Fragment() {
         }
 
         return binding.root
+    }
+
+    override fun onResume() {
+        super.onResume()
+        binding.firstShoe.text = shoe
     }
 }
