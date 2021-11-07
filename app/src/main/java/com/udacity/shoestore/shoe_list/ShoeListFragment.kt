@@ -28,7 +28,13 @@ class ShoeListFragment : Fragment() {
         viewModel = ViewModelProvider(requireActivity())[ShoeViewModel::class.java]
         binding = DataBindingUtil.inflate(layoutInflater, R.layout.fragment_shoe_list, container, false)
 
+        binding.shoeViewModel = viewModel
+
+        binding.lifecycleOwner = requireActivity()
+
         viewModel.getShoe.observe(viewLifecycleOwner, { shoe = it.name })
+
+
 
         binding.fab.setOnClickListener { view ->
             view.findNavController().navigate(
@@ -40,8 +46,8 @@ class ShoeListFragment : Fragment() {
         return binding.root
     }
 
-    override fun onResume() {
+/*    override fun onResume() {
         super.onResume()
         binding.firstShoe.text = shoe
-    }
+    }*/
 }
