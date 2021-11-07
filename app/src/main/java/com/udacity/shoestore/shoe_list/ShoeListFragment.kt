@@ -1,12 +1,15 @@
 package com.udacity.shoestore.shoe_list
 
-import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.databinding.DataBindingUtil
+import androidx.fragment.app.Fragment
+import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.findNavController
 import com.udacity.shoestore.R
+import com.udacity.shoestore.databinding.FragmentShoeListBinding
 
 class ShoeListFragment : Fragment() {
 
@@ -19,10 +22,18 @@ class ShoeListFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
 
         viewModel = ViewModelProvider(this)[ShoeListViewModel::class.java]
+        val binding = DataBindingUtil.inflate<FragmentShoeListBinding>(layoutInflater, R.layout.fragment_shoe_list, container, false)
 
-        return inflater.inflate(R.layout.shoe_list_fragment, container, false)
+        binding.fab.setOnClickListener { view ->
+            view.findNavController().navigate(
+                ShoeListFragmentDirections
+                    .actionShoeListFragmentToShoeDetailFragment()
+            )
+        }
+
+        return binding.root
     }
 }
