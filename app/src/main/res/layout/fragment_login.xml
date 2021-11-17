@@ -50,6 +50,7 @@
             android:layout_marginTop="@dimen/top_margin"
             android:autofillHints="e-mail"
             android:ems="10"
+            android:fontFamily="@font/roboto"
             android:hint="@string/email_field_hint"
             android:inputType="textEmailAddress"
             android:minHeight="48dp"

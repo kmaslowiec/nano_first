@@ -9,6 +9,7 @@
         <entry key="..\:/Users/konra/AndroidStudioProjects/nano_project_1_shoe_store/starter/app/src/main/res/drawable/button_unfocused.xml" value="0.3140625" />
         <entry key="..\:/Users/konra/AndroidStudioProjects/nano_project_1_shoe_store/starter/app/src/main/res/drawable/rounded_button.xml" value="0.3140625" />
         <entry key="..\:/Users/konra/AndroidStudioProjects/nano_project_1_shoe_store/starter/app/src/main/res/font/roboto.xml" value="0.18958333333333333" />
+        <entry key="..\:/Users/konra/AndroidStudioProjects/nano_project_1_shoe_store/starter/app/src/main/res/font/roboto_mono_thin.xml" value="0.164453125" />
         <entry key="..\:/Users/konra/AndroidStudioProjects/nano_project_1_shoe_store/starter/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Users/konra/AndroidStudioProjects/nano_project_1_shoe_store/starter/app/src/main/res/layout/fragment_instruction.xml" value="0.26132246376811596" />
         <entry key="..\:/Users/konra/AndroidStudioProjects/nano_project_1_shoe_store/starter/app/src/main/res/layout/fragment_login.xml" value="0.22" />
@@ -16,8 +17,10 @@
         <entry key="..\:/Users/konra/AndroidStudioProjects/nano_project_1_shoe_store/starter/app/src/main/res/layout/fragment_shoe_detail2.xml" value="0.15234375" />
         <entry key="..\:/Users/konra/AndroidStudioProjects/nano_project_1_shoe_store/starter/app/src/main/res/layout/fragment_shoe_list.xml" value="0.10290742157612853" />
         <entry key="..\:/Users/konra/AndroidStudioProjects/nano_project_1_shoe_store/starter/app/src/main/res/layout/fragment_shoes_list.xml" value="0.2554347826086957" />
+        <entry key="..\:/Users/konra/AndroidStudioProjects/nano_project_1_shoe_store/starter/app/src/main/res/layout/fragment_test.xml" value="0.1" />
         <entry key="..\:/Users/konra/AndroidStudioProjects/nano_project_1_shoe_store/starter/app/src/main/res/layout/fragment_welcome.xml" value="0.25" />
         <entry key="..\:/Users/konra/AndroidStudioProjects/nano_project_1_shoe_store/starter/app/src/main/res/layout/shoe_list_fragment.xml" value="0.18" />
+        <entry key="..\:/Users/konra/AndroidStudioProjects/nano_project_1_shoe_store/starter/app/src/main/res/layout/text_view.xml" value="0.1" />
         <entry key="..\:/Users/konra/AndroidStudioProjects/nano_project_1_shoe_store/starter/app/src/main/res/menu/menu.xml" value="0.12578125" />
       </map>
     </option>

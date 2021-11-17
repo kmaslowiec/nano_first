@@ -9,4 +9,5 @@
     <color name="editFieldsTextColor">#000000</color>
     <color name="textColor">#000000</color>
     <color name="hintTextColor">#0277BD</color>
+    <color name="textview_background">#b8ffbf</color>
 </resources>

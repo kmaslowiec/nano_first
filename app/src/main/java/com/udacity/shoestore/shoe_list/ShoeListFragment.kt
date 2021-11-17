@@ -4,6 +4,10 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.LinearLayout.LayoutParams
+import android.widget.TextView
+import androidx.core.content.ContextCompat
+import androidx.core.view.setMargins
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
@@ -11,7 +15,7 @@ import androidx.navigation.findNavController
 import com.udacity.shoestore.R
 import com.udacity.shoestore.databinding.FragmentShoeListBinding
 import com.udacity.shoestore.shoe_detail.ShoeViewModel
-import timber.log.Timber
+
 
 class ShoeListFragment : Fragment() {
 
@@ -34,8 +38,6 @@ class ShoeListFragment : Fragment() {
 
         viewModel.getShoe.observe(viewLifecycleOwner, { shoe = it.name })
 
-
-
         binding.fab.setOnClickListener { view ->
             view.findNavController().navigate(
                 ShoeListFragmentDirections
@@ -46,8 +48,27 @@ class ShoeListFragment : Fragment() {
         return binding.root
     }
 
-/*    override fun onResume() {
-        super.onResume()
-        binding.firstShoe.text = shoe
-    }*/
+    override fun onStart() {
+        super.onStart()
+        for (i in 1..20){
+            createTextView("one")
+            createTextView("two")
+        }
+    }
+
+    private fun createTextView(text: String) {
+        val padding = resources.getDimension(R.dimen.padding)
+        val params = LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT)
+
+        val textView = TextView(this.context)
+
+        params.setMargins(8)
+        textView.text = text
+        textView.layoutParams = params
+        textView.textSize = resources.getDimension(R.dimen.text_size)
+        textView.setBackgroundColor(ContextCompat.getColor(requireContext(), R.color.textview_background))
+        textView.textAlignment = View.TEXT_ALIGNMENT_CENTER
+        textView.setPadding(padding.toInt(), padding.toInt(), padding.toInt(), padding.toInt())
+        binding.rootLayout.addView(textView)
+    }
 }
