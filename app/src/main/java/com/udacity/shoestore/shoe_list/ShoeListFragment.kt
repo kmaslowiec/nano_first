@@ -15,6 +15,7 @@ import androidx.navigation.findNavController
 import com.udacity.shoestore.R
 import com.udacity.shoestore.databinding.FragmentShoeListBinding
 import com.udacity.shoestore.shoe_detail.ShoeViewModel
+import timber.log.Timber
 
 
 class ShoeListFragment : Fragment() {
@@ -23,6 +24,11 @@ class ShoeListFragment : Fragment() {
     private lateinit var viewModel: ShoeViewModel
     private lateinit var binding : FragmentShoeListBinding
 
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setHasOptionsMenu(false)
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
