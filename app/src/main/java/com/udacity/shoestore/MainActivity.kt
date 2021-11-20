@@ -44,7 +44,7 @@ class MainActivity : AppCompatActivity() {
 
         // controls menu visibility
         navController.addOnDestinationChangedListener { nc: NavController, nd: NavDestination, args: Bundle? ->
-            menu?.findItem(R.id.logoutMenu)?.isVisible = !(nd.id == nc.graph.startDestination || nd.id == R.id.shoeListFragment)
+            menu?.findItem(R.id.loginFragment)?.isVisible = !(nd.id == nc.graph.startDestination || nd.id == R.id.shoeListFragment)
         }
         return true
     }
