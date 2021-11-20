@@ -33,6 +33,10 @@ class ShoeDetailFragment : Fragment() {
 
         viewModel = ViewModelProvider(requireActivity())[ShoeViewModel::class.java]
 
+        binding.shoeViewModel = viewModel
+
+        binding.lifecycleOwner = this
+
         binding.buttonSave.setOnClickListener { view ->
             val name = binding.nameEdit.text.toString()
             val size = if (binding.sizeEdit.text.toString().isNotEmpty()) binding.sizeEdit.text.toString().toDouble() else 0.0

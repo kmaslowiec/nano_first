@@ -5,7 +5,7 @@
     <data>
 
     </data>
-
+    <!--The fragment consist views located vertically. LinearLayout should be enough-->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"

@@ -4,9 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-
+        <variable
+            name="shoeViewModel"
+            type="com.udacity.shoestore.shoe_detail.ShoeViewModel" />
     </data>
 
+    <!--Constrain layouts used to avoid nested tags-->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
