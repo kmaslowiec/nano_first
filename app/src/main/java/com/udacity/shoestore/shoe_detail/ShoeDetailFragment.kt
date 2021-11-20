@@ -15,6 +15,8 @@ import com.udacity.shoestore.models.Shoe
 
 class ShoeDetailFragment : Fragment() {
 
+    private lateinit var viewModel: ShoeViewModel
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -30,7 +32,7 @@ class ShoeDetailFragment : Fragment() {
             )
         }
 
-        val model: ShoeViewModel = ViewModelProvider(requireActivity())[ShoeViewModel::class.java]
+        viewModel = ViewModelProvider(requireActivity())[ShoeViewModel::class.java]
 
         binding.buttonSave.setOnClickListener { view ->
             val name = binding.nameEdit.text.toString()
@@ -39,7 +41,7 @@ class ShoeDetailFragment : Fragment() {
             val desc = binding.descEdit.text.toString()
 
             val newShoe = Shoe(name, size, company, desc)
-            model.addShoe(newShoe)
+            viewModel.addShoe(newShoe)
             view.findNavController()
                 .navigate(ShoeDetailFragmentDirections.actionShoeDetailFragmentToShoeListFragment())
         }

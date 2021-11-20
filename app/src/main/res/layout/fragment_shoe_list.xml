@@ -3,12 +3,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <data>
-        <variable
-            name="shoeViewModel"
-            type="com.udacity.shoestore.shoe_detail.ShoeViewModel" />
-    </data>
-
     <androidx.constraintlayout.widget.ConstraintLayout
 
         android:layout_width="match_parent"
