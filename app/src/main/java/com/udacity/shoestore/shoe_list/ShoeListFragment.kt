@@ -17,7 +17,6 @@ import com.udacity.shoestore.R
 import com.udacity.shoestore.databinding.FragmentShoeListBinding
 import com.udacity.shoestore.models.Shoe
 import com.udacity.shoestore.shoe_detail.ShoeViewModel
-import timber.log.Timber
 
 
 class ShoeListFragment : Fragment() {
@@ -30,12 +29,13 @@ class ShoeListFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
 
-
         binding = DataBindingUtil.inflate(layoutInflater, R.layout.fragment_shoe_list, container, false)
 
         viewModel = ViewModelProvider(requireActivity())[ShoeViewModel::class.java]
-        viewModel.getShoe.observe(viewLifecycleOwner, {
-            createTextView(it)
+        viewModel.getShoes.observe(viewLifecycleOwner, {
+            for (shoe in it) {
+                createTextView(shoe)
+            }
         })
 
         binding.fab.setOnClickListener { view ->
@@ -51,15 +51,14 @@ class ShoeListFragment : Fragment() {
     private fun createTextView(shoe : Shoe) {
         val padding = resources.getDimension(R.dimen.padding)
         val params = LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT)
-
-        val textView = TextView(this.context)
-
-        params.setMargins(8)
-
         val content = "Shoe Name: ${shoe.name}\n" +
                 "Company: ${shoe.company}\n" +
                 "Shoe Size: ${shoe.size}\n" +
                 "Description: ${shoe.description}"
+
+        val textView = TextView(this.context)
+
+        params.setMargins(8)
 
         textView.text = content
         textView.layoutParams = params

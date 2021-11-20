@@ -9,7 +9,6 @@ import androidx.navigation.NavController
 import androidx.navigation.NavDestination
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
-import androidx.navigation.get
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.NavigationUI.setupActionBarWithNavController
 import androidx.navigation.ui.navigateUp
@@ -41,12 +40,11 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.menu, menu)
+
+        // controls menu visibility
         navController.addOnDestinationChangedListener { nc: NavController, nd: NavDestination, args: Bundle? ->
-            if (nd.id == nc.graph.startDestination || nd.id == R.id.shoeListFragment) {
-                menu?.findItem(R.id.logoutMenu)?.isVisible = false
-            }else{
-                menuInflater.inflate(R.menu.menu, menu)
-            }
+            menu?.findItem(R.id.logoutMenu)?.isVisible = !(nd.id == nc.graph.startDestination || nd.id == R.id.shoeListFragment)
         }
         return true
     }
