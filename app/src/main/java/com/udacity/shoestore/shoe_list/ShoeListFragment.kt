@@ -10,7 +10,6 @@ import androidx.core.content.ContextCompat
 import androidx.core.view.setMargins
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
 import com.udacity.shoestore.R
@@ -22,7 +21,7 @@ import com.udacity.shoestore.shoe_detail.ShoeViewModel
 class ShoeListFragment : Fragment() {
 
     private lateinit var viewModel: ShoeViewModel
-    private lateinit var binding : FragmentShoeListBinding
+    private lateinit var binding: FragmentShoeListBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -48,7 +47,7 @@ class ShoeListFragment : Fragment() {
         return binding.root
     }
 
-    private fun createTextView(shoe : Shoe) {
+    private fun createTextView(shoe: Shoe) {
         val padding = resources.getDimension(R.dimen.padding)
         val params = LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT)
         val content = "Shoe Name: ${shoe.name}\n" +

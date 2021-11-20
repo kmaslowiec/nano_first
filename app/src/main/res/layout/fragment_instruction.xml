@@ -9,16 +9,16 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
         android:gravity="center"
-        tools:context=".instruction.InstructionFragment" >
+        android:orientation="vertical"
+        tools:context=".instruction.InstructionFragment">
 
         <TextView
             android:id="@+id/instr_label"
             style="@style/label_style"
-            android:layout_margin="@dimen/label_margin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_margin="@dimen/label_margin"
             android:text="@string/instruction_label" />
 
         <TextView
