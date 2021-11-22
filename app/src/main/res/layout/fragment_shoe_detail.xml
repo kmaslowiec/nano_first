@@ -4,9 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+
+        <variable
+            name="shoe"
+            type="com.udacity.shoestore.models.Shoe" />
+
         <variable
             name="shoeViewModel"
-            type="com.udacity.shoestore.shoe_detail.ShoeViewModel" />
+            type="com.udacity.shoestore.models.ShoeViewModel" />
     </data>
 
     <!--Constrain layouts used to avoid nested tags-->
@@ -33,6 +38,7 @@
 
         <EditText
             android:id="@+id/name_edit"
+            android:text="@={shoe.name}"
             style="@style/edit_short_style"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -61,6 +67,7 @@
 
         <EditText
             android:id="@+id/company_edit"
+            android:text="@={shoe.company}"
             style="@style/edit_short_style"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -78,7 +85,7 @@
             style="@style/label_style"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/size_label"
+
             app:layout_constraintBottom_toTopOf="@+id/size_edit"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
@@ -87,6 +94,7 @@
 
         <EditText
             android:id="@+id/size_edit"
+            android:text="@={`` + shoe.size}"
             style="@style/edit_short_style"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -115,6 +123,7 @@
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/desc_edit"
+            android:text="@={shoe.description}"
             style="@style/edit_long_style"
             android:layout_width="match_parent"
             android:layout_height="100dp"

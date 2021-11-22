@@ -11,6 +11,7 @@ import androidx.navigation.findNavController
 import com.udacity.shoestore.R
 import com.udacity.shoestore.databinding.FragmentShoeDetailBinding
 import com.udacity.shoestore.models.Shoe
+import com.udacity.shoestore.models.ShoeViewModel
 
 class ShoeDetailFragment : Fragment() {
 
@@ -37,14 +38,13 @@ class ShoeDetailFragment : Fragment() {
 
         binding.lifecycleOwner = this
 
-        binding.buttonSave.setOnClickListener { view ->
-            val name = binding.nameEdit.text.toString()
-            val size = if (binding.sizeEdit.text.toString().isNotEmpty()) binding.sizeEdit.text.toString().toDouble() else 0.0
-            val company = binding.companyEdit.text.toString()
-            val desc = binding.descEdit.text.toString()
+        binding.shoe = Shoe("", 0.0, "", "")
 
-            val newShoe = Shoe(name, size, company, desc)
-            viewModel.addShoe(newShoe)
+        binding.buttonSave.setOnClickListener { view ->
+            val shoeName = binding.shoe
+
+            viewModel.addShoe(shoeName!!)
+
             view.findNavController()
                 .navigate(ShoeDetailFragmentDirections.actionShoeDetailFragmentToShoeListFragment())
         }
